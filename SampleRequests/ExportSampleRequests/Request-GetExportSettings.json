@@ -1,0 +1,21 @@
+{
+	"ExportCode": "ResultSIKB",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"Product": null,
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005"
+						}
+					]
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}

@@ -1,0 +1,32 @@
+{
+	"Samples": [{
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"Product": null,
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}, {
+					"CountryCode": "NL",
+					"AccountCode": "ANL038464"
+				}
+			]
+		}, {
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"Product": null,
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}, {
+					"CountryCode": "NL",
+					"AccountCode": "ANL038464"
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}

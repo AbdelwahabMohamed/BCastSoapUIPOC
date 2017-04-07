@@ -1,0 +1,76 @@
+{
+	"ExportCode": "ResultSIKB",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"ReceivingLabCode": "EUNLBA",
+			"CustomerSampleCode": "",
+			"ReceptionDate": "2016-12-28T00:00:00",
+			"SampleStatus": "Validated",
+			"SampleDescription": "mlp 2812 5",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"SamplingDateFrom": null,
+			"SamplingDateTo": null,
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"ExpectedDayOfResults": "2017-01-04T00:00:00",
+			"Order": {
+				"EurofinsOrderReference": "006-10522-732",
+				"CustomerOrderReference": "orderref                                          ",
+				"ExternalOrderReference": null,
+				"CustomerProject": null
+			},
+			"Product": null,
+			"AnalyticalReport": {
+				"ValidationDate": "2016-12-28T13:45:02.29",
+				"AnalyticalReportReference": "2016056888"
+			},
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}
+			],
+			"AdditionalFields": [{
+					"AdditionalFieldName": "Monster datum",
+					"AdditionalFieldValue": "27/12/2016"
+				}
+			],
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"ProductionLabCode": "EUNLBA",
+					"ValidationDate": "2016-12-28T13:45:02.29",
+					"MethodSourceCode": "Y9010",
+					"MethodTechnique": "ICP-MS",
+					"TestStatus": "Done",
+					"TestName": "Chroom (Cr)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"ParameterName": "Chroom (Cr)",
+							"StandardLimitOfQuantification": null,
+							"LimitOfQuantification": null,
+							"ParameterGroup": "25",
+							"Result": {
+								"ResultValue": "990",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01",
+								"Uncertainty": null,
+								"Comment": null,
+								"LineOrder": "1"
+							},
+							"AccreditationPrograms": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"Settings": [{
+			"SettingCode": "sikbVersion",
+			"SettingValue": "V10"
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}

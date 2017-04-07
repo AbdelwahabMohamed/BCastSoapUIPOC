@@ -1,0 +1,87 @@
+{
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"SalesLabCode": "EUNLBA",
+			"Corrections": []
+		}, {
+			"EurofinsSampleCode": "005-10522-1034",
+			"SalesLabCode": "EUNLBA",
+			"Corrections": []
+		}
+	],
+	"Settings": [{
+			"Items": [{
+					"Code": "Default",
+					"Name": "Default"
+				}, {
+					"Code": "1.0.0",
+					"Name": "Versie 1.0.0"
+				}, {
+					"Code": "1.0.1",
+					"Name": "Versie 1.0.1"
+				}, {
+					"Code": "1.1.0",
+					"Name": "Versie 1.1.0"
+				}
+			],
+			"SettingType": "List",
+			"Category": "ComplianceAssessment",
+			"SettingCode": "botovaVersion",
+			"SettingName": "BoToVa versie"
+		}, {
+			"Items": [{
+					"Code": "Excel",
+					"Name": "Excel document"
+				}
+			],
+			"SettingType": "List",
+			"Category": "Layout",
+			"SettingCode": "format",
+			"SettingName": "Formaat"
+		}, {
+			"DefaultValue": false,
+			"SettingType": "Boolean",
+			"Category": "BoToVa",
+			"SettingCode": "16",
+			"SettingName": "Is Diep grondwater"
+		}, {
+			"Items": [{
+					"Code": "AnalysisOriented",
+					"Name": "Analyse georiënteerd"
+				}, {
+					"Code": "SampleOriented",
+					"Name": "Monster georiënteerd"
+				}
+			],
+			"SettingType": "List",
+			"Category": "Layout",
+			"SettingCode": "orientation",
+			"SettingName": "Orientatie"
+		}, {
+			"DefaultValue": false,
+			"SettingType": "Boolean",
+			"Category": "Layout",
+			"SettingCode": "isVisibleMeasuredValue",
+			"SettingName": "Toon gemeten waarden"
+		}, {
+			"DefaultValue": false,
+			"SettingType": "Boolean",
+			"Category": "Layout",
+			"SettingCode": "isVisibleRG",
+			"SettingName": "Toon rapportagegrens"
+		}, {
+			"DefaultValue": false,
+			"SettingType": "Boolean",
+			"Category": "Layout",
+			"SettingCode": "isVisibleNoNorm",
+			"SettingName": "Toon resultaten zonder normwaarde"
+		}, {
+			"DefaultValue": false,
+			"SettingType": "Boolean",
+			"Category": "Layout",
+			"SettingCode": "isVisibleFinalResult",
+			"SettingName": "Toon toetsoordeel"
+		}
+	],
+	"CorrectiveParameters": []
+}

@@ -1,0 +1,20 @@
+{
+	"Exports": [{
+			"ExportCode": "ResultSIKB",
+			"ExportName": "SIKB",
+			"HasSettings": true
+		}, {
+			"ExportCode": "OVAM",
+			"ExportName": "OVAM Webloket",
+			"HasSettings": true
+		}, {
+			"ExportCode": "Analytico",
+			"ExportName": "Standaard analyse rapport (Analytico Barneveld)",
+			"HasSettings": true
+		}, {
+			"ExportCode": "IBDTXT",
+			"ExportName": "IBD export tekstbestand",
+			"HasSettings": false
+		}
+	]
+}

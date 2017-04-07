@@ -1,0 +1,19 @@
+{
+	"Settings": [{
+			"Items": [{
+					"Code": "V8",
+					"Name": "Versie 8.0.0"
+				}, {
+					"Code": "V9",
+					"Name": "Versie 9.1.0"
+				}, {
+					"Code": "V10",
+					"Name": "Versie 10.2.2"
+				}
+			],
+			"SettingType": "List",
+			"SettingCode": "sikbVersion",
+			"SettingName": "SIKB versie"
+		}
+	]
+}

@@ -1,0 +1,203 @@
+{
+	"ComplianceAssessmentDataSetCode": "botova-13-M29",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"SalesLabCode": "EUNLBA",
+			"CustomerSampleCode": "",
+			"SamplingDateFrom": null,
+			"SamplingDateTo": null,
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"SampleDescription": "mlp 2812 5",
+			"Order": {
+				"EurofinsOrderReference": "006-10522-732",
+				"CustomerOrderReference": "orderref                                          ",
+				"ExternalOrderReference": null,
+				"CustomerProject": null
+			},
+			"Product": {
+				"ProductCode": null
+			},
+			"AnalyticalReport": {
+				"ValidationDate": "2016-12-28T13:45:02.29",
+				"AnalyticalReportReference": "2016056888"
+			},
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"TestName": "Chroom (Cr)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"ParameterName": "Chroom (Cr)                                       ",
+							"ParameterGroup": "25",
+							"Result": {
+								"ResultValue": "990",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			],
+			"Corrections": [],
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}
+			]
+		}, {
+			"EurofinsSampleCode": "005-10522-1034",
+			"SalesLabCode": "EUNLBA",
+			"CustomerSampleCode": "",
+			"SamplingDateFrom": null,
+			"SamplingDateTo": null,
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"SampleDescription": "mlp 2812 6",
+			"Order": {
+				"EurofinsOrderReference": "006-10522-732",
+				"CustomerOrderReference": "orderref                                          ",
+				"ExternalOrderReference": null,
+				"CustomerProject": null
+			},
+			"Product": {
+				"ProductCode": null
+			},
+			"AnalyticalReport": {
+				"ValidationDate": "2016-12-28T13:45:02.65",
+				"AnalyticalReportReference": "2016056888"
+			},
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"TestName": "Chroom (Cr)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"ParameterName": "Chroom (Cr)                                       ",
+							"ParameterGroup": "25",
+							"Result": {
+								"ResultValue": "980",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}, {
+					"TestCode": "FF03W",
+					"TestName": "Minerale olie (C10-C40)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "F001F317",
+							"ParameterName": "Minerale olie totaal (C10-C40)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<38",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF000037",
+							"ParameterName": "Minerale olie (C10-C12)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012A",
+							"ParameterName": "Minerale olie (C21-C30)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<15",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012B",
+							"ParameterName": "Minerale olie (C30-C35)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012C",
+							"ParameterName": "Minerale olie (C35-C40)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000037",
+							"ParameterName": "Minerale olie (C12-C16)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000038",
+							"ParameterName": "Minerale olie (C16-C21)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			],
+			"Corrections": [],
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}
+			]
+		}
+	],
+	"Settings": [{
+			"SettingCode": "botovaVersion",
+			"SettingValue": "Default"
+		}, {
+			"SettingCode": "format",
+			"SettingValue": "Excel"
+		}, {
+			"SettingCode": "16",
+			"SettingValue": "False"
+		}, {
+			"SettingCode": "orientation",
+			"SettingValue": "AnalysisOriented"
+		}, {
+			"SettingCode": "isVisibleMeasuredValue",
+			"SettingValue": "True"
+		}, {
+			"SettingCode": "isVisibleRG",
+			"SettingValue": "True"
+		}, {
+			"SettingCode": "isVisibleNoNorm",
+			"SettingValue": "False"
+		}, {
+			"SettingCode": "isVisibleFinalResult",
+			"SettingValue": "False"
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}

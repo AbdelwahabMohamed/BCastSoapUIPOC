@@ -1,0 +1,108 @@
+{
+	"ComplianceAssessmentDataSetCode": "botova-13-M29",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"Product": null,
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"Result": {
+								"ResultValue": "990",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			]
+		}, {
+			"EurofinsSampleCode": "005-10522-1034",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"Product": null,
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"Result": {
+								"ResultValue": "980",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}, {
+					"TestCode": "FF03W",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "F001F317",
+							"Result": {
+								"ResultValue": "<38",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF000037",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012A",
+							"Result": {
+								"ResultValue": "<15",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012B",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012C",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000037",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000038",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}

@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="71fe9bed-8dd2-4f17-b59c-e8d58ec55334" activeEnvironment="Default" name="BCast-SoapUI-Project" resourceRoot="" defaultScriptLanguage="Groovy" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" lastOpened="2017-04-07T10:15:24.152+02:00" xmlns:con="http://eviware.com/soapui/config"><con:description>Bcast testing using SoapUI</con:description><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="Test-ComplianceAssessments"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="true"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="f029d689-37a1-4954-af6a-8580baa34d14" wadlVersion="http://wadl.dev.java.net/2009/02" name="ComplianceAssessments" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://eu50apvt023</con:endpoint><con:endpoint>http://eu51tset001</con:endpoint><con:endpoint>http://localhost</con:endpoint></con:endpoints><con:resource name="GetAvailableComplianceAssessments" path="/Eurofins.BCAST.Service/api/ComplianceAssessment/GetAvailableComplianceAssessments" id="0253ef10-a8f0-44a3-932f-0479017d3ae7"><con:settings/><con:parameters/><con:method name="GetAvailableComplianceAssessments" id="dfe47403-4441-43e7-a8d7-7ae02670c9da" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/GetAvailableComplianceAssessments">get:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:get="http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/GetAvailableComplianceAssessments">get:Fault</con:element></con:representation><con:request name="GACA-Request1" id="2ff212fc-20d3-424a-9a23-f30ec78d38c0" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://eu50apvt023</con:endpoint><con:request>{
+	"Samples": [{
+			"LegacyMatrixCode": "05948",
+			"SamplingPointName": null,
+			"SamplingPointCode": null,
+			"Product": null,
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}, {
+					"CountryCode": "NL",
+					"AccountCode": "ANL038464"
+				}
+			]
+		}, {
+			"LegacyMatrixCode": "05948",
+			"SamplingPointName": null,
+			"SamplingPointCode": null,
+			"Product": null,
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}, {
+					"CountryCode": "NL",
+					"AccountCode": "ANL038464"
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}
+</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/GetAvailableComplianceAssessments</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password/><con:domain/><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="GetSettings" path="/Eurofins.BCAST.Service/api/ComplianceAssessment/GetSettings" id="e04710d5-68fa-4d6b-b6af-42882dedcbb2"><con:settings/><con:parameters/><con:method name="GetSettings" id="0e8bef3e-7268-47a9-b20d-9cadd9295f41" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:get="http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/GetSettings">get:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/GetSettings">get:Response</con:element></con:representation><con:request name="GS-Request1" id="169a0b13-5d40-497f-81aa-35d003747642" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://eu50apvt023</con:endpoint><con:request><![CDATA[{
+	"ComplianceAssessmentDataSetCode": "botova-13-M29",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"Product": null,
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"Result": {
+								"ResultValue": "990",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			]
+		}, {
+			"EurofinsSampleCode": "005-10522-1034",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"Product": null,
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"Result": {
+								"ResultValue": "980",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}, {
+					"TestCode": "FF03W",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "F001F317",
+							"Result": {
+								"ResultValue": "<38",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF000037",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012A",
+							"Result": {
+								"ResultValue": "<15",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012B",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012C",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000037",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000038",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}]]></con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/GetSettings</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password/><con:domain/><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="PerformComplianceAssessment" path="/Eurofins.BCAST.Service/api/ComplianceAssessment/PerformComplianceAssessment" id="f15ed167-adaa-4c1f-88d0-8feac0f4a638"><con:settings/><con:parameters/><con:method name="PerformComplianceAssessment" id="5745e6c0-adf1-4367-bd96-1c5e1d734c70" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:per="http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/PerformComplianceAssessment">per:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:per="http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/PerformComplianceAssessment">per:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="PCA-Request1" id="01b70962-85ce-4581-ba8e-b57484a5571c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@remove_empty_content">false</con:setting><con:setting id="com.eviware.soapui.settings.CommonSettings@entitizeProperties">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost</con:endpoint><con:request><![CDATA[{
+	"ComplianceAssessmentDataSetCode": "botova-13-M29",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"SalesLabCode": "EUNLBA",
+			"CustomerSampleCode": "",
+			"SamplingDateFrom": null,
+			"SamplingDateTo": null,
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"SampleDescription": "mlp 2812 5",
+			"Order": {
+				"EurofinsOrderReference": "006-10522-732",
+				"CustomerOrderReference": "orderref                                          ",
+				"ExternalOrderReference": null,
+				"CustomerProject": null
+			},
+			"Product": {
+				"ProductCode": null
+			},
+			"AnalyticalReport": {
+				"ValidationDate": "2016-12-28T13:45:02.29",
+				"AnalyticalReportReference": "2016056888"
+			},
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"TestName": "Chroom (Cr)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"ParameterName": "Chroom (Cr)                                       ",
+							"ParameterGroup": "25",
+							"Result": {
+								"ResultValue": "990",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			],
+			"Corrections": [],
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}
+			]
+		}, {
+			"EurofinsSampleCode": "005-10522-1034",
+			"SalesLabCode": "EUNLBA",
+			"CustomerSampleCode": "",
+			"SamplingDateFrom": null,
+			"SamplingDateTo": null,
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"SampleDescription": "mlp 2812 6",
+			"Order": {
+				"EurofinsOrderReference": "006-10522-732",
+				"CustomerOrderReference": "orderref                                          ",
+				"ExternalOrderReference": null,
+				"CustomerProject": null
+			},
+			"Product": {
+				"ProductCode": null
+			},
+			"AnalyticalReport": {
+				"ValidationDate": "2016-12-28T13:45:02.65",
+				"AnalyticalReportReference": "2016056888"
+			},
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"TestName": "Chroom (Cr)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"ParameterName": "Chroom (Cr)                                       ",
+							"ParameterGroup": "25",
+							"Result": {
+								"ResultValue": "980",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}, {
+					"TestCode": "FF03W",
+					"TestName": "Minerale olie (C10-C40)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "F001F317",
+							"ParameterName": "Minerale olie totaal (C10-C40)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<38",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF000037",
+							"ParameterName": "Minerale olie (C10-C12)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012A",
+							"ParameterName": "Minerale olie (C21-C30)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<15",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012B",
+							"ParameterName": "Minerale olie (C30-C35)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012C",
+							"ParameterName": "Minerale olie (C35-C40)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000037",
+							"ParameterName": "Minerale olie (C12-C16)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000038",
+							"ParameterName": "Minerale olie (C16-C21)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			],
+			"Corrections": [],
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}
+			]
+		}
+	],
+	"Settings": [{
+			"SettingCode": "botovaVersion",
+			"SettingValue": "Default"
+		}, {
+			"SettingCode": "format",
+			"SettingValue": "Excel"
+		}, {
+			"SettingCode": "16",
+			"SettingValue": "False"
+		}, {
+			"SettingCode": "orientation",
+			"SettingValue": "AnalysisOriented"
+		}, {
+			"SettingCode": "isVisibleMeasuredValue",
+			"SettingValue": "True"
+		}, {
+			"SettingCode": "isVisibleRG",
+			"SettingValue": "True"
+		}, {
+			"SettingCode": "isVisibleNoNorm",
+			"SettingValue": "False"
+		}, {
+			"SettingCode": "isVisibleFinalResult",
+			"SettingValue": "False"
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}]]></con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/PerformComplianceAssessment</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password/><con:domain/><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="3b592afc-ad8e-4be9-aeb7-3be438896e19" wadlVersion="http://wadl.dev.java.net/2009/02" name="Export" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://eu50apvt023</con:endpoint><con:endpoint>http://localhost</con:endpoint></con:endpoints><con:resource name="GetAvailableExports" path="/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports" id="09a98674-7327-4031-b442-5c6f62e670e9"><con:settings/><con:parameters/><con:method name="GetAvailableExports" id="5beb2a5c-5b75-46eb-a248-850c8875f282" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://localhost/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports">get:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="GAE-Request1" id="66ea40a2-e775-4a61-8f3e-016d0968d191" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+	"Samples": [{
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"Product": null,
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}, {
+					"CountryCode": "NL",
+					"AccountCode": "ANL038464"
+				}
+			]
+		}, {
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"Product": null,
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}, {
+					"CountryCode": "NL",
+					"AccountCode": "ANL038464"
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}
+</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="GetExportSettings" path="/Eurofins.BCAST.Service/api/LabResult/GetExportSettings" id="53817cc4-bbcc-431c-aeea-200408d362f1"><con:settings/><con:parameters/><con:method name="GetExportSettings" id="f4705a3e-19d7-4f18-9202-09fede29df4c" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://localhost/Eurofins.BCAST.Service/api/LabResult/GetExportSettings">get:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:get="http://localhost/Eurofins.BCAST.Service/api/LabResult/GetExportSettings">get:Fault</con:element></con:representation><con:request name="GES-Request1" id="94615b41-395e-4ac9-be87-b3c5488f1435" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+	"ExportCode": "ResultSIKB",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"Product": null,
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005"
+						}
+					]
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}
+</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/GetExportSettings</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="PerformExport" path="/Eurofins.BCAST.Service/api/LabResult/PerformExport" id="6b8cea19-4ac1-4dd2-bbda-5e5ca25a1756"><con:settings/><con:parameters/><con:method name="PerformExport" id="286e8f54-a22d-4886-8e78-f4e54d8a7d3f" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:per="http://localhost/Eurofins.BCAST.Service/api/LabResult/PerformExport">per:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json;</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="PE-Request1" id="d9a6c6ba-af1b-4166-9db6-ef321c4a777e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost</con:endpoint><con:request>{
+	"ExportCode": "ResultSIKB",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"ReceivingLabCode": "EUNLBA",
+			"CustomerSampleCode": "",
+			"ReceptionDate": "2016-12-28T00:00:00",
+			"SampleStatus": "Validated",
+			"SampleDescription": "mlp 2812 5",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"SamplingDateFrom": null,
+			"SamplingDateTo": null,
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"ExpectedDayOfResults": "2017-01-04T00:00:00",
+			"Order": {
+				"EurofinsOrderReference": "006-10522-732",
+				"CustomerOrderReference": "orderref                                          ",
+				"ExternalOrderReference": null,
+				"CustomerProject": null
+			},
+			"Product": null,
+			"AnalyticalReport": {
+				"ValidationDate": "2016-12-28T13:45:02.29",
+				"AnalyticalReportReference": "2016056888"
+			},
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}
+			],
+			"AdditionalFields": [{
+					"AdditionalFieldName": "Monster datum",
+					"AdditionalFieldValue": "27/12/2016"
+				}
+			],
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"ProductionLabCode": "EUNLBA",
+					"ValidationDate": "2016-12-28T13:45:02.29",
+					"MethodSourceCode": "Y9010",
+					"MethodTechnique": "ICP-MS",
+					"TestStatus": "Done",
+					"TestName": "Chroom (Cr)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"ParameterName": "Chroom (Cr)",
+							"StandardLimitOfQuantification": null,
+							"LimitOfQuantification": null,
+							"ParameterGroup": "25",
+							"Result": {
+								"ResultValue": "990",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01",
+								"Uncertainty": null,
+								"Comment": null,
+								"LineOrder": "1"
+							},
+							"AccreditationPrograms": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"Settings": [{
+			"SettingCode": "sikbVersion",
+			"SettingValue": "V10"
+		}
+	],  
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/PerformExport</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="de4b5095-c9ce-4415-89a9-d0605815ff25" name="Test-ComplianceAssessments"><con:description>TestSuite generated for REST Service [http://localhost]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d5be7dc7-e942-4861-80a4-4b40287d2515" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAvailableComplianceAssessments TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [GetAvailableComplianceAssessments] located at [/Eurofins.BCAST.Service/api/ComplianceAssessment/GetAvailableComplianceAssessments]</con:description><con:settings/><con:testStep type="restrequest" name="GACA-Request1" id="9561cf1c-e926-4a80-b53a-de9d31bb7df1"><con:settings/><con:config service="ComplianceAssessments" resourcePath="/Eurofins.BCAST.Service/api/ComplianceAssessment/GetAvailableComplianceAssessments" methodName="GetAvailableComplianceAssessments" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GACA-Request1" id="2ff212fc-20d3-424a-9a23-f30ec78d38c0" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://eu50apvt023</con:endpoint><con:request>{
+	"Samples": [{
+			"LegacyMatrixCode": "05948",
+			"SamplingPointName": null,
+			"SamplingPointCode": null,
+			"Product": null,
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}, {
+					"CountryCode": "NL",
+					"AccountCode": "ANL038464"
+				}
+			]
+		}, {
+			"LegacyMatrixCode": "05948",
+			"SamplingPointName": null,
+			"SamplingPointCode": null,
+			"Product": null,
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}, {
+					"CountryCode": "NL",
+					"AccountCode": "ANL038464"
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}
+</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/GetAvailableComplianceAssessments</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="9eb57637-1ef1-4627-8dc3-937d1b2e3fb4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetSettings TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [GetSettings] located at [/Eurofins.BCAST.Service/api/ComplianceAssessment/GetSettings]</con:description><con:settings/><con:testStep type="restrequest" name="GS-Request1" id="dc17b92c-4ac6-4269-948d-50b32c5bb9f8"><con:settings/><con:config service="ComplianceAssessments" resourcePath="/Eurofins.BCAST.Service/api/ComplianceAssessment/GetSettings" methodName="GetSettings" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GS-Request1" id="169a0b13-5d40-497f-81aa-35d003747642" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost</con:endpoint><con:request><![CDATA[{
+	"ComplianceAssessmentDataSetCode": "botova-13-M29",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"Product": null,
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"Result": {
+								"ResultValue": "990",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			]
+		}, {
+			"EurofinsSampleCode": "005-10522-1034",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"Product": null,
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"Result": {
+								"ResultValue": "980",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}, {
+					"TestCode": "FF03W",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "F001F317",
+							"Result": {
+								"ResultValue": "<38",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF000037",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012A",
+							"Result": {
+								"ResultValue": "<15",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012B",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012C",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000037",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000038",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}]]></con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/GetSettings</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="053594db-9109-4563-932a-039140c76268" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PerformComplianceAssessment TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [PerformComplianceAssessment] located at [/Eurofins.BCAST.Service/api/ComplianceAssessment/PerformComplianceAssessment]</con:description><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="PCA-Request1" id="96b77599-f109-422c-ae0a-35b0ab37e270"><con:settings/><con:config service="ComplianceAssessments" resourcePath="/Eurofins.BCAST.Service/api/ComplianceAssessment/PerformComplianceAssessment" methodName="PerformComplianceAssessment" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PCA-Request1" id="01b70962-85ce-4581-ba8e-b57484a5571c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@remove_empty_content">false</con:setting><con:setting id="com.eviware.soapui.settings.CommonSettings@entitizeProperties">false</con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@dump-file"/><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@max-size">0</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://eu50apvt023</con:endpoint><con:request><![CDATA[{
+	"ComplianceAssessmentDataSetCode": "botova-13-M29",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"SalesLabCode": "EUNLBA",
+			"CustomerSampleCode": "",
+			"SamplingDateFrom": null,
+			"SamplingDateTo": null,
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"SampleDescription": "mlp 2812 5",
+			"Order": {
+				"EurofinsOrderReference": "006-10522-732",
+				"CustomerOrderReference": "orderref                                          ",
+				"ExternalOrderReference": null,
+				"CustomerProject": null
+			},
+			"Product": {
+				"ProductCode": null
+			},
+			"AnalyticalReport": {
+				"ValidationDate": "2016-12-28T13:45:02.29",
+				"AnalyticalReportReference": "2016056888"
+			},
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"TestName": "Chroom (Cr)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"ParameterName": "Chroom (Cr)                                       ",
+							"ParameterGroup": "25",
+							"Result": {
+								"ResultValue": "990",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			],
+			"Corrections": [],
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}
+			]
+		}, {
+			"EurofinsSampleCode": "005-10522-1034",
+			"SalesLabCode": "EUNLBA",
+			"CustomerSampleCode": "",
+			"SamplingDateFrom": null,
+			"SamplingDateTo": null,
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"SampleDescription": "mlp 2812 6",
+			"Order": {
+				"EurofinsOrderReference": "006-10522-732",
+				"CustomerOrderReference": "orderref                                          ",
+				"ExternalOrderReference": null,
+				"CustomerProject": null
+			},
+			"Product": {
+				"ProductCode": null
+			},
+			"AnalyticalReport": {
+				"ValidationDate": "2016-12-28T13:45:02.65",
+				"AnalyticalReportReference": "2016056888"
+			},
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"TestName": "Chroom (Cr)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"ParameterName": "Chroom (Cr)                                       ",
+							"ParameterGroup": "25",
+							"Result": {
+								"ResultValue": "980",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}, {
+					"TestCode": "FF03W",
+					"TestName": "Minerale olie (C10-C40)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "F001F317",
+							"ParameterName": "Minerale olie totaal (C10-C40)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<38",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF000037",
+							"ParameterName": "Minerale olie (C10-C12)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012A",
+							"ParameterName": "Minerale olie (C21-C30)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<15",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012B",
+							"ParameterName": "Minerale olie (C30-C35)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "FF00012C",
+							"ParameterName": "Minerale olie (C35-C40)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000037",
+							"ParameterName": "Minerale olie (C12-C16)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}, {
+							"ParameterCode": "MF000038",
+							"ParameterName": "Minerale olie (C16-C21)",
+							"ParameterGroup": "80",
+							"Result": {
+								"ResultValue": "<10",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01"
+							}
+						}
+					]
+				}
+			],
+			"Corrections": [],
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}
+			]
+		}
+	],
+	"Settings": [{
+			"SettingCode": "botovaVersion",
+			"SettingValue": "Default"
+		}, {
+			"SettingCode": "format",
+			"SettingValue": "Excel"
+		}, {
+			"SettingCode": "16",
+			"SettingValue": "False"
+		}, {
+			"SettingCode": "orientation",
+			"SettingValue": "AnalysisOriented"
+		}, {
+			"SettingCode": "isVisibleMeasuredValue",
+			"SettingValue": "True"
+		}, {
+			"SettingCode": "isVisibleRG",
+			"SettingValue": "True"
+		}, {
+			"SettingCode": "isVisibleNoNorm",
+			"SettingValue": "False"
+		}, {
+			"SettingCode": "isVisibleFinalResult",
+			"SettingValue": "False"
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}]]></con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/PerformComplianceAssessment</con:originalUri><con:assertion type="Simple Contains" id="78116edc-024b-4885-9bc7-b52dc47c5529" name="ContentExists"><con:configuration><token>Content</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="19ab243e-cbb9-44ba-afa2-4d3de2d7e729" name="FileNameExists"><con:configuration><token>Filename</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="SaveComplianceAssessment" id="afc37dd4-5f0b-4c01-9a5b-70aac54547c0"><con:settings/><con:config><script>import org.apache.commons.codec.binary.Base64;
+import groovy.json.JsonSlurper;
+
+//Get Content From Previous step'
+def response = testRunner.testCase.getTestStepAt(0).getPropertyValue("response");//or getTestStepByName("PCA-Request1")
+def responseJson = new JsonSlurper().parseText(response);
+String fileName = responseJson.Filename;
+String filecontent = responseJson.Content;
+log.info("File " + fileName + "is retrieved Successfully");
+// Decode base64
+def b64 = new Base64();
+byte[] textBytes = b64.decode(filecontent.getBytes());
+
+// Write &amp; close output file
+def groovyUtils = new  com.eviware.soapui.support.GroovyUtils(context)
+String projectPath = groovyUtils.projectPath
+FileOutputStream stream = new java.io.FileOutputStream(new File(projectPath+"/ComplianceAssessmentsOutputFiles/"+fileName));
+stream.write(textBytes);
+stream.flush(); 
+stream.close();
+</script></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>590b646c-6e10-4d30-90f7-af7c84507a7c</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>afc37dd4-5f0b-4c01-9a5b-70aac54547c0</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:testSuite id="2649a2f7-e690-4d19-a61b-79c150b6e2f7" name="Test-Export"><con:description>TestSuite generated for REST Service [Export]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ecb2a865-ac04-4385-93d8-16374b1c48d0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAvailableExports TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [GetAvailableExports] located at [/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports]</con:description><con:settings/><con:testStep type="restrequest" name="GAE-Request1" id="346bca48-049e-4410-9820-046d59e74e94"><con:settings/><con:config service="Export" resourcePath="/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports" methodName="GetAvailableExports" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GAE-Request1" id="66ea40a2-e775-4a61-8f3e-016d0968d191" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+	"Samples": [{
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"Product": null,
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}, {
+					"CountryCode": "NL",
+					"AccountCode": "ANL038464"
+				}
+			]
+		}, {
+			"LegacyMatrixCode": "05948",
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"Product": null,
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}, {
+					"CountryCode": "NL",
+					"AccountCode": "ANL038464"
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}
+</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="b18c58bc-c442-4cb5-b176-23f9f1dc9421" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetExportSettings TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [GetExportSettings] located at [/Eurofins.BCAST.Service/api/LabResult/GetExportSettings]</con:description><con:settings/><con:testStep type="restrequest" name="GES-Request1" id="41ecaaa6-5a34-42d1-9dd9-438513b0fd97"><con:settings/><con:config service="Export" resourcePath="/Eurofins.BCAST.Service/api/LabResult/GetExportSettings" methodName="GetExportSettings" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GES-Request1" id="94615b41-395e-4ac9-be87-b3c5488f1435" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+	"ExportCode": "ResultSIKB",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"Product": null,
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005"
+						}
+					]
+				}
+			]
+		}
+	],
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}
+</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/GetExportSettings</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c5d8b56-04a1-4adc-bb70-0e06de3b639b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PerformExport TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [PerformExport] located at [/Eurofins.BCAST.Service/api/LabResult/PerformExport]</con:description><con:settings/><con:testStep type="restrequest" name="PE-Request1" id="2791ce8f-de7d-4b45-8360-37f374012c13"><con:settings/><con:config service="Export" resourcePath="/Eurofins.BCAST.Service/api/LabResult/PerformExport" methodName="PerformExport" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PE-Request1" id="d9a6c6ba-af1b-4166-9db6-ef321c4a777e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost</con:endpoint><con:request>{
+	"ExportCode": "ResultSIKB",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"ReceivingLabCode": "EUNLBA",
+			"CustomerSampleCode": "",
+			"ReceptionDate": "2016-12-28T00:00:00",
+			"SampleStatus": "Validated",
+			"SampleDescription": "mlp 2812 5",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"SamplingDateFrom": null,
+			"SamplingDateTo": null,
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"ExpectedDayOfResults": "2017-01-04T00:00:00",
+			"Order": {
+				"EurofinsOrderReference": "006-10522-732",
+				"CustomerOrderReference": "orderref                                          ",
+				"ExternalOrderReference": null,
+				"CustomerProject": null
+			},
+			"Product": null,
+			"AnalyticalReport": {
+				"ValidationDate": "2016-12-28T13:45:02.29",
+				"AnalyticalReportReference": "2016056888"
+			},
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}
+			],
+			"AdditionalFields": [{
+					"AdditionalFieldName": "Monster datum",
+					"AdditionalFieldValue": "27/12/2016"
+				}
+			],
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"ProductionLabCode": "EUNLBA",
+					"ValidationDate": "2016-12-28T13:45:02.29",
+					"MethodSourceCode": "Y9010",
+					"MethodTechnique": "ICP-MS",
+					"TestStatus": "Done",
+					"TestName": "Chroom (Cr)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"ParameterName": "Chroom (Cr)",
+							"StandardLimitOfQuantification": null,
+							"LimitOfQuantification": null,
+							"ParameterGroup": "25",
+							"Result": {
+								"ResultValue": "990",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01",
+								"Uncertainty": null,
+								"Comment": null,
+								"LineOrder": "1"
+							},
+							"AccreditationPrograms": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"Settings": [{
+			"SettingCode": "sikbVersion",
+			"SettingValue": "V10"
+		}
+	],  
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/PerformExport</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="SaveExport" id="557ff3bc-a532-4a40-be63-10518854e4fe"><con:settings/><con:config><script>import org.apache.commons.codec.binary.Base64;
+import groovy.json.JsonSlurper;
+
+//Get Content From Previous step'
+def response = testRunner.testCase.getTestStepAt(0).getPropertyValue("response");//or getTestStepByName("PCA-Request1")
+def responseJson = new JsonSlurper().parseText(response);
+String fileName = responseJson.Filename;
+String filecontent = responseJson.Content;
+log.info("File " + fileName + "is retrieved Successfully");
+// Decode base64
+def b64 = new Base64();
+byte[] textBytes = b64.decode(filecontent.getBytes());
+
+// Write &amp; close output file
+def groovyUtils = new  com.eviware.soapui.support.GroovyUtils(context)
+String projectPath = groovyUtils.projectPath
+FileOutputStream stream = new java.io.FileOutputStream(new File(projectPath+"/ExportOutputFiles/"+fileName));
+stream.write(textBytes);
+stream.flush(); 
+stream.close();
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:requirements/><con:properties><con:property><con:name>OutPut</con:name><con:value>C:\Users\ABO3\Desktop\BCast Soap-UI\Responses</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/><con:authRepository/><con:tags/></con:soapui-project>

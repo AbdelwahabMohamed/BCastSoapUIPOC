@@ -1,0 +1,40 @@
+{
+	"ComplianceAssessmentDataSets": [{
+			"ComplianceAssessmentDataSetName": "AGW 14-06-2001 Annex III (water)",
+			"ComplianceAssessmentDataSetCode": "agw14062001ann3-anaenv-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "Beoordeling drinkwater cfr KB 14.01.2002 (water)",
+			"ComplianceAssessmentDataSetCode": "be-kb-20020114-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "Beoordeling drinkwater cfr B. Vl. Reg. 13.12.2002 (water)",
+			"ComplianceAssessmentDataSetCode": "be-vlb-20021213-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "BoToVa T13 kwaliteit van grondwater volgens Wbb (water)",
+			"ComplianceAssessmentDataSetCode": "botova-13-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "Brussels Gewest 2009 (water)",
+			"ComplianceAssessmentDataSetCode": "TOETSBRUSALG2009-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "Brussels Gewest 2016 (water)",
+			"ComplianceAssessmentDataSetCode": "TOETSBRUSALG2016-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "Waals gewest 2008 (water)",
+			"ComplianceAssessmentDataSetCode": "waals2008-anaenv-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "S en I 2009 (water)",
+			"ComplianceAssessmentDataSetCode": "si2009-anaenv-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "S en I 2012 excl Barium (water)",
+			"ComplianceAssessmentDataSetCode": "si2012-anaenv-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "S & I 2000 (water)",
+			"ComplianceAssessmentDataSetCode": "si2000-anaenv-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "VLAREBO 2008 bijlage 2,3,4 (water)",
+			"ComplianceAssessmentDataSetCode": "vlarebo2008-anaenv-M29"
+		}, {
+			"ComplianceAssessmentDataSetName": "Waalse gewest 2004 (water)",
+			"ComplianceAssessmentDataSetCode": "waals2004-anaenv-M29"
+		}
+	]
+}
