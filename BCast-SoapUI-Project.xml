@@ -371,7 +371,7 @@
 	],
 	"UserLanguage": "nl",
 	"UserCulture": "en-US"
-}]]></con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/PerformComplianceAssessment</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password/><con:domain/><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="3b592afc-ad8e-4be9-aeb7-3be438896e19" wadlVersion="http://wadl.dev.java.net/2009/02" name="Export" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://eu50apvt023</con:endpoint><con:endpoint>http://localhost</con:endpoint></con:endpoints><con:resource name="GetAvailableExports" path="/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports" id="09a98674-7327-4031-b442-5c6f62e670e9"><con:settings/><con:parameters/><con:method name="GetAvailableExports" id="5beb2a5c-5b75-46eb-a248-850c8875f282" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://localhost/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports">get:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="GAE-Request1" id="66ea40a2-e775-4a61-8f3e-016d0968d191" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+}]]></con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/PerformComplianceAssessment</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password/><con:domain/><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="3b592afc-ad8e-4be9-aeb7-3be438896e19" wadlVersion="http://wadl.dev.java.net/2009/02" name="Export" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://eu50apvt023</con:endpoint><con:endpoint>http://eu51tset001</con:endpoint><con:endpoint>http://localhost</con:endpoint></con:endpoints><con:resource name="GetAvailableExports" path="/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports" id="09a98674-7327-4031-b442-5c6f62e670e9"><con:settings/><con:parameters/><con:method name="GetAvailableExports" id="5beb2a5c-5b75-46eb-a248-850c8875f282" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://localhost/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports">get:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="GAE-Request1" id="66ea40a2-e775-4a61-8f3e-016d0968d191" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
 	"Samples": [{
 			"LegacyMatrixCode": "05948",
 			"SamplingPointCode": null,
@@ -843,24 +843,36 @@
 }]]></con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/ComplianceAssessment/PerformComplianceAssessment</con:originalUri><con:assertion type="Simple Contains" id="78116edc-024b-4885-9bc7-b52dc47c5529" name="ContentExists"><con:configuration><token>Content</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="19ab243e-cbb9-44ba-afa2-4d3de2d7e729" name="FileNameExists"><con:configuration><token>Filename</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="SaveComplianceAssessment" id="afc37dd4-5f0b-4c01-9a5b-70aac54547c0"><con:settings/><con:config><script>import org.apache.commons.codec.binary.Base64;
 import groovy.json.JsonSlurper;
 
-//Get Content From Previous step'
-def response = testRunner.testCase.getTestStepAt(0).getPropertyValue("response");//or getTestStepByName("PCA-Request1")
-def responseJson = new JsonSlurper().parseText(response);
-String fileName = responseJson.Filename;
-String filecontent = responseJson.Content;
-log.info("File " + fileName + "is retrieved Successfully");
-// Decode base64
-def b64 = new Base64();
-byte[] textBytes = b64.decode(filecontent.getBytes());
+//loop over test steps
+context.testCase.getTestStepList().each {
+	def response = it.getPropertyValue("response");
+	if (response) {
+		def responseJson = new JsonSlurper().parseText(response);
+		
+		String filecontent = responseJson.Content;
+		String fileName = responseJson.Filename;
+		def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context);
+		String projectPath = groovyUtils.projectPath.toString();
+		String folderPath = testRunner.testCase.testSuite.project.getPropertyValue("ComplianceAssessmentsOutput");
 
-// Write &amp; close output file
-def groovyUtils = new  com.eviware.soapui.support.GroovyUtils(context)
-String projectPath = groovyUtils.projectPath
-FileOutputStream stream = new java.io.FileOutputStream(new File(projectPath+"/ComplianceAssessmentsOutputFiles/"+fileName));
-stream.write(textBytes);
-stream.flush(); 
-stream.close();
-</script></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>590b646c-6e10-4d30-90f7-af7c84507a7c</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>afc37dd4-5f0b-4c01-9a5b-70aac54547c0</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:testSuite id="2649a2f7-e690-4d19-a61b-79c150b6e2f7" name="Test-Export"><con:description>TestSuite generated for REST Service [Export]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ecb2a865-ac04-4385-93d8-16374b1c48d0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAvailableExports TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [GetAvailableExports] located at [/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports]</con:description><con:settings/><con:testStep type="restrequest" name="GAE-Request1" id="346bca48-049e-4410-9820-046d59e74e94"><con:settings/><con:config service="Export" resourcePath="/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports" methodName="GetAvailableExports" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GAE-Request1" id="66ea40a2-e775-4a61-8f3e-016d0968d191" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+		// Decode base64
+		def b64 = new Base64();
+		byte[]textBytes = b64.decode(filecontent.getBytes());
+
+		// Write &amp; close output file
+		def folder = new File(projectPath + folderPath);
+		if (!folder.exists()) {
+			log.info("creating folder: " + folder);
+			folder.mkdir();
+		}
+		FileOutputStream stream = new java.io.FileOutputStream(new File(projectPath + folderPath + fileName));
+		log.info("saving file: " + fileName + " from test step: "+it.name);
+		stream.write(textBytes);
+		stream.flush();
+		stream.close();
+	}
+};
+</script></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>590b646c-6e10-4d30-90f7-af7c84507a7c</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>afc37dd4-5f0b-4c01-9a5b-70aac54547c0</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:testSuite id="2649a2f7-e690-4d19-a61b-79c150b6e2f7" name="Test-Export"><con:description>TestSuite generated for REST Service [Export]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ecb2a865-ac04-4385-93d8-16374b1c48d0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetAvailableExports TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [GetAvailableExports] located at [/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports]</con:description><con:settings/><con:testStep type="restrequest" name="GAE-Request1" id="346bca48-049e-4410-9820-046d59e74e94"><con:settings/><con:config service="Export" resourcePath="/Eurofins.BCAST.Service/api/LabResult/GetAvailableExports" methodName="GetAvailableExports" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GAE-Request1" id="66ea40a2-e775-4a61-8f3e-016d0968d191" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://eu50apvt023</con:endpoint><con:request>{
 	"Samples": [{
 			"LegacyMatrixCode": "05948",
 			"SamplingPointCode": null,
@@ -913,7 +925,7 @@ stream.close();
 	"UserLanguage": "nl",
 	"UserCulture": "en-US"
 }
-</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/GetExportSettings</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c5d8b56-04a1-4adc-bb70-0e06de3b639b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PerformExport TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [PerformExport] located at [/Eurofins.BCAST.Service/api/LabResult/PerformExport]</con:description><con:settings/><con:testStep type="restrequest" name="PE-Request1" id="2791ce8f-de7d-4b45-8360-37f374012c13"><con:settings/><con:config service="Export" resourcePath="/Eurofins.BCAST.Service/api/LabResult/PerformExport" methodName="PerformExport" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PE-Request1" id="d9a6c6ba-af1b-4166-9db6-ef321c4a777e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost</con:endpoint><con:request>{
+</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/GetExportSettings</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c5d8b56-04a1-4adc-bb70-0e06de3b639b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="PerformExport TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [PerformExport] located at [/Eurofins.BCAST.Service/api/LabResult/PerformExport]</con:description><con:settings/><con:testStep type="restrequest" name="PE-SIKBExport" id="2791ce8f-de7d-4b45-8360-37f374012c13"><con:settings/><con:config service="Export" resourcePath="/Eurofins.BCAST.Service/api/LabResult/PerformExport" methodName="PerformExport" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PE-Request1" id="d9a6c6ba-af1b-4166-9db6-ef321c4a777e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://eu50apvt023</con:endpoint><con:request>{
 	"ExportCode": "ResultSIKB",
 	"Samples": [{
 			"EurofinsSampleCode": "005-10522-1033",
@@ -988,24 +1000,111 @@ stream.close();
 	],  
 	"UserLanguage": "nl",
 	"UserCulture": "en-US"
-}</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/PerformExport</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="SaveExport" id="557ff3bc-a532-4a40-be63-10518854e4fe"><con:settings/><con:config><script>import org.apache.commons.codec.binary.Base64;
+}</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/PerformExport</con:originalUri><con:assertion type="Simple Contains" id="81cb74b5-99c9-407c-87e1-b8804c6d6490" name="ContentExists"><con:configuration><token>Content</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="9037e40b-6f2f-4341-ace0-ffacec02c5e3" name="filenameExists"><con:configuration><token>Filename</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="OVAMExport" id="a3c0b87d-edd0-4bc6-b1ee-dcf07894bfb7"><con:settings/><con:config service="Export" resourcePath="/Eurofins.BCAST.Service/api/LabResult/PerformExport" methodName="PerformExport" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PE-Request2" id="d9a6c6ba-af1b-4166-9db6-ef321c4a777e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://eu50apvt023</con:endpoint><con:request>{
+	"ExportCode": "OVAM",
+	"Samples": [{
+			"EurofinsSampleCode": "005-10522-1033",
+			"ReceivingLabCode": "EUNLBA",
+			"CustomerSampleCode": "",
+			"ReceptionDate": "2016-12-28T00:00:00",
+			"SampleStatus": "Validated",
+			"SampleDescription": "mlp 2812 5",
+			"SalesLabCode": "EUNLBA",
+			"LegacyMatrixCode": "05948",
+			"SamplingDateFrom": null,
+			"SamplingDateTo": null,
+			"SamplingPointCode": null,
+			"SamplingPointName": null,
+			"ExpectedDayOfResults": "2017-01-04T00:00:00",
+			"Order": {
+				"EurofinsOrderReference": "006-10522-732",
+				"CustomerOrderReference": "orderref                                          ",
+				"ExternalOrderReference": null,
+				"CustomerProject": null
+			},
+			"Product": null,
+			"AnalyticalReport": {
+				"ValidationDate": "2016-12-28T13:45:02.29",
+				"AnalyticalReportReference": "2016056888"
+			},
+			"Customers": [{
+					"CountryCode": null,
+					"AccountCode": "ANL038464"
+				}
+			],
+			"AdditionalFields": [{
+					"AdditionalFieldName": "Monster datum",
+					"AdditionalFieldValue": "27/12/2016"
+				}
+			],
+			"TestsPerformed": [{
+					"TestCode": "FF023",
+					"ProductionLabCode": "EUNLBA",
+					"ValidationDate": "2016-12-28T13:45:02.29",
+					"MethodSourceCode": "Y9010",
+					"MethodTechnique": "ICP-MS",
+					"TestStatus": "Done",
+					"TestName": "Chroom (Cr)",
+					"FractionName": null,
+					"ParametersPerformed": [{
+							"ParameterCode": "7003A005",
+							"ParameterName": "Chroom (Cr)",
+							"StandardLimitOfQuantification": null,
+							"LimitOfQuantification": null,
+							"ParameterGroup": "25",
+							"Result": {
+								"ResultValue": "990",
+								"ResultUnit": "µg/l",
+								"UnitNumeratorCode": "07",
+								"UnitDenominatorCode": "01",
+								"Uncertainty": null,
+								"Comment": null,
+								"LineOrder": "1"
+							},
+							"AccreditationPrograms": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"Settings": [{
+			"SettingCode": "sikbVersion",
+			"SettingValue": "V10"
+		}
+	],  
+	"UserLanguage": "nl",
+	"UserCulture": "en-US"
+}</con:request><con:originalUri>http://localhost/Eurofins.BCAST.Service/api/LabResult/PerformExport</con:originalUri><con:assertion type="Simple Contains" id="c55b5241-0cc8-4368-b382-78e6d666f491" name="Content"><con:configuration><token>Content</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="937cf8c5-f3f3-4848-a6d2-abf63bf2a1f8" name="FilenameExists"><con:configuration><token>Filename</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="SaveExport" id="557ff3bc-a532-4a40-be63-10518854e4fe"><con:settings/><con:config><script>import org.apache.commons.codec.binary.Base64;
 import groovy.json.JsonSlurper;
 
-//Get Content From Previous step'
-def response = testRunner.testCase.getTestStepAt(0).getPropertyValue("response");//or getTestStepByName("PCA-Request1")
-def responseJson = new JsonSlurper().parseText(response);
-String fileName = responseJson.Filename;
-String filecontent = responseJson.Content;
-log.info("File " + fileName + "is retrieved Successfully");
-// Decode base64
-def b64 = new Base64();
-byte[] textBytes = b64.decode(filecontent.getBytes());
+//loop over test steps
+context.testCase.getTestStepList().each {
+	def response = it.getPropertyValue("response");
+	if (response) {
+		def responseJson = new JsonSlurper().parseText(response);
+		
+		String filecontent = responseJson.Content;
+		String fileName = responseJson.Filename;
+		def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context);
+		String projectPath = groovyUtils.projectPath.toString();
+		String folderPath = testRunner.testCase.testSuite.project.getPropertyValue("ExportOutput");
 
-// Write &amp; close output file
-def groovyUtils = new  com.eviware.soapui.support.GroovyUtils(context)
-String projectPath = groovyUtils.projectPath
-FileOutputStream stream = new java.io.FileOutputStream(new File(projectPath+"/ExportOutputFiles/"+fileName));
-stream.write(textBytes);
-stream.flush(); 
-stream.close();
-</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:requirements/><con:properties><con:property><con:name>OutPut</con:name><con:value>C:\Users\ABO3\Desktop\BCast Soap-UI\Responses</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/><con:authRepository/><con:tags/></con:soapui-project>
+		// Decode base64
+		def b64 = new Base64();
+		byte[]textBytes = b64.decode(filecontent.getBytes());
+
+		// Write &amp; close output file
+		def folder = new File(projectPath + folderPath);
+		if (!folder.exists()) {
+			log.info("creating folder: " + folder);
+			folder.mkdir();
+		}
+		FileOutputStream stream = new java.io.FileOutputStream(new File(projectPath + folderPath + fileName));
+		log.info("saving file: " + fileName + " from test step: "+it.name);
+		stream.write(textBytes);
+		stream.flush();
+		stream.close();
+	}
+};
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:requirements/><con:properties><con:property><con:name>ComplianceAssessmentsOutput</con:name><con:value>/ComplianceAssessmentsOutputFiles/</con:value></con:property><con:property><con:name>ExportOutput</con:name><con:value>/ExportOutputFiles/</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/><con:authRepository/><con:tags/></con:soapui-project>
